@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""3"""
+"""Pagination3.
+"""
 
 import csv
 import math
@@ -7,13 +8,15 @@ from typing import Dict, List, Tuple
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
-    """index_range"""
+    """index_range.
+    """
 
     return ((page - 1) * page_size, ((page - 1) * page_size) + page_size)
 
 
 class Server:
-    """Server"""
+    """Server.
+    """
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
@@ -30,7 +33,8 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        """get_page"""
+        """get_page.
+        """
         assert type(page) == int and type(page_size) == int
         assert page > 0 and page_size > 0
         start, end = index_range(page, page_size)
@@ -40,7 +44,8 @@ class Server:
         return data[start:end]
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
-        """get_hyper_index"""
+        """get_hyper_index.
+        """
         data = self.indexed_dataset()
         assert index is not None and index >= 0 and index <= max(data.keys())
         page_data = []
