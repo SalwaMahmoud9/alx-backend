@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""2.
+"""2
 """
 from collections import OrderedDict
 
@@ -7,16 +7,17 @@ from base_caching import BaseCaching
 
 
 class LIFOCache(BaseCaching):
-    """LIFOCache.
+    """LIFOCache
     """
+
     def __init__(self):
-        """Initialize.
+        """init
         """
         super().__init__()
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
-        """put.
+        """put
         """
         if key is None or item is None:
             return
@@ -28,6 +29,7 @@ class LIFOCache(BaseCaching):
         self.cache_data.move_to_end(key, last=True)
 
     def get(self, key):
-        """get.
+        """get
         """
         return self.cache_data.get(key, None)
+
