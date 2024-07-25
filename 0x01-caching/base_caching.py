@@ -1,13 +1,12 @@
 
 #!/usr/bin/env python3
-"""BaseCaching module.
+"""BaseCaching.
 """
 
 
 class BaseCaching():
     """BaseCaching defines:
-      - constants of your caching system
-      - where your data are stored (in a dictionary)
+      - constants
     """
     MAX_ITEMS = 4
 
