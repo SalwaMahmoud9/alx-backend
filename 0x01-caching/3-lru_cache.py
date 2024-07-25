@@ -1,24 +1,22 @@
 #!/usr/bin/env python3
-'''3.
-'''
-
-
+"""3
+"""
 from collections import OrderedDict
+
 from base_caching import BaseCaching
 
 
 class LRUCache(BaseCaching):
-    '''LRUCache.
-    '''
-
+    """LRUCache
+    """
     def __init__(self):
-        '''initialize.
-        '''
+        """init
+        """
         super().__init__()
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
-        """put.
+        """put
         """
         if key is None or item is None:
             return
@@ -32,7 +30,7 @@ class LRUCache(BaseCaching):
             self.cache_data[key] = item
 
     def get(self, key):
-        """get.
+        """get
         """
         if key is not None and key in self.cache_data:
             self.cache_data.move_to_end(key, last=False)
