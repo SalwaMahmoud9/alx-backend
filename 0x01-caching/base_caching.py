@@ -1,31 +1,36 @@
-#!/usr/bin/python3
-""" Base Caching.
+
+#!/usr/bin/env python3
+"""BaseCaching module.
 """
 
 
 class BaseCaching():
-    """ BaseCaching.
+    """BaseCaching defines:
+      - constants of your caching system
+      - where your data are stored (in a dictionary)
     """
     MAX_ITEMS = 4
 
     def __init__(self):
-        """ Initiliaze.
+        """init.
         """
         self.cache_data = {}
 
     def print_cache(self):
-        """ Print cache.
+        """Print.
         """
         print("Current cache:")
         for key in sorted(self.cache_data.keys()):
             print("{}: {}".format(key, self.cache_data.get(key)))
 
     def put(self, key, item):
-        """ put.
+        """put.
         """
-        raise NotImplementedError("put must be implemented in your cache class")
+        error_msg = "put must be implemented in your cache class"
+        raise NotImplementedError(error_msg)
 
     def get(self, key):
-        """ get.
+        """get.
         """
-        raise NotImplementedError("get must be implemented in your cache class")
+        error_msg = "get must be implemented in your cache class"
+        raise NotImplementedError(error_msg)
