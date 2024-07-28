@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Most Recently Used caching module.
+"""4-mru_cache.
 """
 from collections import OrderedDict
 
@@ -11,7 +11,7 @@ class MRUCache(BaseCaching):
     """
 
     def __init__(self):
-        """Initialize
+        """init
         """
         super().__init__()
         self.cache_data = OrderedDict()

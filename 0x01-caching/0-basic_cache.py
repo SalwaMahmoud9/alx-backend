@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""base_caching
+"""0-base_cache
 """
 from base_caching import BaseCaching
 
@@ -9,7 +9,7 @@ class BasicCache(BaseCaching):
     """
 
     def put(self, key, item):
-        """set
+        """put
         """
         if key is None or item is None:
             return

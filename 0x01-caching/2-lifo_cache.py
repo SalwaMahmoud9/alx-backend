@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LIFOCache
+"""2-lifo_cache
 """
 from collections import OrderedDict
 
@@ -11,7 +11,7 @@ class LIFOCache(BaseCaching):
     """
 
     def __init__(self):
-        """Initializes
+        """init
         """
         super().__init__()
         self.cache_data = OrderedDict()

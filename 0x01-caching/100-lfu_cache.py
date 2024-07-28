@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""caching module.
+"""100-lfu_cache.
 """
 from collections import OrderedDict
 
@@ -11,14 +11,14 @@ class LFUCache(BaseCaching):
     """
 
     def __init__(self):
-        """Initialize
+        """init
         """
         super().__init__()
         self.cache_data = OrderedDict()
         self.keys_freq = []
 
     def __reorder_items(self, mru_key):
-        """reorder items
+        """reorder_sitems
         """
         max_positions = []
         mru_freq = 0
