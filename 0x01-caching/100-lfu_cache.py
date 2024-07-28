@@ -11,7 +11,7 @@ class LFUCache(BaseCaching):
     """
 
     def __init__(self):
-        """init
+        """Initialize
         """
         super().__init__()
         self.cache_data = OrderedDict()

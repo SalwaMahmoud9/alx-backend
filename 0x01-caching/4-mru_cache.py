@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""4
+"""4.
 """
 from collections import OrderedDict
 
