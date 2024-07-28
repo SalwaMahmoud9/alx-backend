@@ -19,4 +19,3 @@ class BasicCache(BaseCaching):
         """get
         """
         return self.cache_data.get(key, None)
-    
