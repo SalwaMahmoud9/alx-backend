@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""100.
+"""caching module.
 """
 from collections import OrderedDict
 

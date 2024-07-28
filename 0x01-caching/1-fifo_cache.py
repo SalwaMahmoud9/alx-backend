@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""1
+"""FIFOCache
 """
 from collections import OrderedDict
 
@@ -11,7 +11,7 @@ class FIFOCache(BaseCaching):
     """
 
     def __init__(self):
-        """init
+        """Initializes
         """
         super().__init__()
         self.cache_data = OrderedDict()
